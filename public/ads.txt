@@ -1,0 +1,2 @@
+# Google AdSense Publisher Identification File for DigiX.com.pk
+google.com, pub-1334689534917556, DIRECT, f08c47fec0942fa0

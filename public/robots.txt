@@ -1,0 +1,11 @@
+# DigiX Robots.txt File
+# Domain: DigiX.com.pk
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Host & Sitemap Declaration
+Host: https://digix.com.pk
+Sitemap: https://digix.com.pk/sitemap.xml
