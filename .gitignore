@@ -24,3 +24,5 @@ yarn-error.log*
 
 # build outputs & ts cache
 *.tsbuildinfo
+
+.vercel

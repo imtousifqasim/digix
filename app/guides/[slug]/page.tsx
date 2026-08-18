@@ -170,7 +170,35 @@ export default function GuideArticlePage({ params }: GuidePageProps) {
                 {sec.heading}
               </h2>
               <div className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed whitespace-pre-line">
-                {sec.content}
+                {sec.content.split(/(\[[^\]]+\]\([^)]+\))/g).map((part, idx) => {
+                  const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+                  if (match) {
+                    const [, text, url] = match;
+                    if (url.startsWith('/')) {
+                      return (
+                        <Link
+                          key={idx}
+                          href={url}
+                          className="text-indigo-600 dark:text-indigo-400 font-semibold underline underline-offset-2 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors"
+                        >
+                          {text}
+                        </Link>
+                      );
+                    }
+                    return (
+                      <a
+                        key={idx}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 dark:text-indigo-400 font-semibold underline underline-offset-2 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors"
+                      >
+                        {text}
+                      </a>
+                    );
+                  }
+                  return part;
+                })}
               </div>
 
               {/* Comparison Table rendering */}

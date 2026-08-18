@@ -2,12 +2,12 @@ import { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AdSlot from "@/components/AdSlot";
 import Link from "next/link";
-import { ShieldCheck, Lock, Zap, Award, Users, CheckCircle2, FileText, MapPin } from "lucide-react";
+import { ShieldCheck, Lock, Zap, Award, Users, CheckCircle2, FileText, MapPin, Smartphone, Monitor } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About DigiX - Our Engineering Mission & E-E-A-T Commitment",
+  title: "About DigiX - Engineering Architecture & Testing Methodology",
   description:
-    "Learn about DigiX, our 100% client-side browser compression architecture, privacy commitments, editorial integrity, and engineering team.",
+    "Learn about DigiX, our 100% client-side browser compression architecture, browser testing methodology, editorial integrity, and engineering commitments.",
   alternates: {
     canonical: "https://digix.com.pk/about",
   },
@@ -29,7 +29,7 @@ export default function AboutPage() {
         </h1>
 
         <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
-          DigiX (`DigiX.com.pk`) is an independent web utility laboratory engineering privacy-first, client-side browser applications for digital image compression, format transcoding, and Core Web Vitals optimization.
+          DigiX (<code className="text-indigo-600 dark:text-indigo-400">DigiX.com.pk</code>) is an independent web utility laboratory engineering privacy-first, client-side browser applications for digital image compression, format transcoding, and document optimization.
         </p>
       </div>
 
@@ -41,7 +41,7 @@ export default function AboutPage() {
           </div>
           <h2 className="text-base font-bold text-slate-900 dark:text-white">100% Client-Side Privacy</h2>
           <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-            We believe sensitive personal identity scans (CNIC, passports, signatures) should never be uploaded to remote cloud servers. DigiX runs entirely inside your browser's local HTML5 Canvas memory.
+            We believe sensitive identity documents (CNIC, passport photos, digital signatures) should never be uploaded to remote cloud servers. DigiX runs entirely inside your browser&apos;s local HTML5 Canvas memory.
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export default function AboutPage() {
           </div>
           <h2 className="text-base font-bold text-slate-900 dark:text-white">Zero Server Latency</h2>
           <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-            By eliminating server upload/download cycles, DigiX processes images instantly at native GPU and RAM speeds directly on your computer or mobile device.
+            By eliminating server upload and download cycles, DigiX processes images instantly at native device GPU and RAM speeds directly on your computer or mobile phone.
           </p>
         </div>
 
@@ -59,49 +59,89 @@ export default function AboutPage() {
           <div className="p-3 rounded-2xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 w-fit">
             <ShieldCheck className="w-6 h-6" />
           </div>
-          <h2 className="text-base font-bold text-slate-900 dark:text-white">Verifiable Standards</h2>
+          <h2 className="text-base font-bold text-slate-900 dark:text-white">Verified Specifications</h2>
           <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-            Our target KB parameters are rigorously verified against official government e-services guidelines (NADRA, FPSC, PPSC, e-Visas) and cited transparently.
+            Our preset KB targets are rigorously verified against official government e-services guidelines (NADRA, FPSC, PPSC, e-Visas) and cited transparently.
           </p>
         </div>
       </div>
 
-      {/* Engineering Story & Location */}
+      {/* Engineering Story & Team Credentials */}
       <div className="p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 space-y-4 shadow-sm">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
-          <Users className="w-5 h-5 text-indigo-600" /> Our Origin Story & Lab Office
+          <Users className="w-5 h-5 text-indigo-600" /> Engineering Background & Lab Team
         </h2>
         <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-          DigiX was founded in 2026 by lead full-stack web architect M. Tousif Qasim and a team of web performance enthusiasts based in Okara, Pakistan. Frustrated by online compression tools littered with intrusive pop-ups, slow server upload delays, and questionable privacy policies for government document scans, we built DigiX to set a new benchmark for browser utility security.
+          DigiX was established to solve a common problem faced by job seekers, students, and citizens: online image converters littered with intrusive pop-up ads, slow server upload delays, and questionable cloud data storage practices for sensitive identity documents.
         </p>
+        <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs text-slate-700 dark:text-slate-300 space-y-2">
+          <p className="font-semibold text-slate-900 dark:text-white">Engineering Lead & Team Background:</p>
+          <p>
+            • <strong>Lead Full-Stack Web Architect:</strong> M. Tousif Qasim (Senior Full-Stack Engineer & Specialist in Client-Side Web Application Architecture).
+          </p>
+          <p>
+            • <strong>Engineering Team:</strong> Specializing in HTML5 Canvas 2D Context APIs, WebAssembly binary quantization, and web performance optimization.
+          </p>
+        </div>
         <div className="pt-2 flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
           <MapPin className="w-4 h-4 text-indigo-600" />
           <span>Registered Office: Hujra Shah Muqeem, Okara, Pakistan</span>
         </div>
       </div>
 
-      {/* AdSense Policy & Editorial Standards */}
+      {/* Testing Methodology Section */}
+      <div className="p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 space-y-4 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+          <Monitor className="w-5 h-5 text-indigo-600" /> Testing Methodology & Cross-Browser Validation
+        </h2>
+        <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          To ensure that every compressed image, CNIC scan, and signature upload successfully passes automated validators across official portals (such as PPSC, FPSC, NADRA, and HEC), DigiX rigorously tests its binary quantization engine across hardware and software platforms:
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+          <div className="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 space-y-1">
+            <h3 className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <Monitor className="w-4 h-4 text-indigo-600" /> Desktop Browsers
+            </h3>
+            <p className="text-xs text-slate-600 dark:text-slate-400">
+              Validated on Google Chrome 120+, Apple Safari (macOS Sonoma), Mozilla Firefox 121+, and Microsoft Edge across Windows 10/11 and macOS.
+            </p>
+          </div>
+          <div className="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 space-y-1">
+            <h3 className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <Smartphone className="w-4 h-4 text-indigo-600" /> Mobile & Tablet Browsers
+            </h3>
+            <p className="text-xs text-slate-600 dark:text-slate-400">
+              Tested on Mobile Chrome (Android 12/13/14), Mobile Safari (iOS 16/17), and Samsung Internet on 3G, 4G LTE, and Wi-Fi connections.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Support Commitment & Editorial Links */}
       <div className="p-8 rounded-3xl border border-indigo-200 dark:border-indigo-900/60 bg-indigo-50/50 dark:bg-indigo-950/30 space-y-4">
         <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-          <FileText className="w-5 h-5 text-indigo-600" /> AdSense Quality & Policy Compliance
+          <FileText className="w-5 h-5 text-indigo-600" /> Direct Support Commitment & Policies
         </h2>
         <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
-          DigiX is strictly engineered to pass Google AdSense's Webmaster Quality Guidelines and Program Policies. We reject thin, duplicate, or auto-generated content. All technical guides are written originally by real subject matter experts, backed by empirical benchmarks, and updated regularly.
+          We are committed to total user support transparency. Our technical support team reviews user inquiries, portal spec update notices, and bug reports daily. <strong>We guarantee a response to all technical and editorial inquiries within 24 to 48 hours.</strong>
         </p>
         <div className="flex flex-wrap gap-4 pt-2 text-xs font-semibold text-indigo-700 dark:text-indigo-300">
           <Link href="/privacy-policy" className="hover:underline flex items-center gap-1">
-            <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Privacy Disclosure Policy
+            <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Privacy Policy
           </Link>
           <Link href="/editorial-policy" className="hover:underline flex items-center gap-1">
             <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Editorial Integrity Policy
           </Link>
+          <Link href="/terms-of-service" className="hover:underline flex items-center gap-1">
+            <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Terms of Service
+          </Link>
           <Link href="/contact" className="hover:underline flex items-center gap-1">
-            <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Direct Technical Support
+            <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Contact Support (24-48h Response)
           </Link>
         </div>
       </div>
 
-      <AdSlot slotId="about-page-bottom" format="horizontal" />
+      <AdSlot slotId="about-bottom" format="horizontal" />
     </div>
   );
 }
