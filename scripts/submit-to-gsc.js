@@ -41,7 +41,7 @@ function getAllProductionUrls() {
   // 12 Tool Pages from lib/seo-data.ts
   try {
     const seoDataContent = fs.readFileSync(path.join(__dirname, '..', 'lib', 'seo-data.ts'), 'utf8');
-    const toolMatches = [...seoDataContent.matchAll(/"([a-z0-9\-]+)":\s*\{/g)];
+    const toolMatches = [...seoDataContent.matchAll(/"slug":\s*"([a-z0-9\-]+)"/g)];
     toolMatches.forEach(m => urls.push(`${DOMAIN}/${m[1]}`));
   } catch (err) {
     console.error('⚠️ Could not parse lib/seo-data.ts:', err.message);
@@ -50,7 +50,7 @@ function getAllProductionUrls() {
   // 8 Guide Pages from lib/guides-data.ts
   try {
     const guidesDataContent = fs.readFileSync(path.join(__dirname, '..', 'lib', 'guides-data.ts'), 'utf8');
-    const guideMatches = [...guidesDataContent.matchAll(/"([a-z0-9\-]+)":\s*\{/g)];
+    const guideMatches = [...guidesDataContent.matchAll(/"slug":\s*"([a-z0-9\-]+)"/g)];
     guideMatches.forEach(m => urls.push(`${DOMAIN}/guides/${m[1]}`));
   } catch (err) {
     console.error('⚠️ Could not parse lib/guides-data.ts:', err.message);
