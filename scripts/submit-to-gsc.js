@@ -18,7 +18,7 @@ const { google } = require('googleapis');
 
 const DOMAIN = 'https://digix.com.pk';
 // GSC supports two property formats: 'https://digix.com.pk/' or Domain Property 'sc-domain:digix.com.pk'
-const GSC_SITE_URL = process.env.GSC_SITE_URL || 'sc-domain:digix.com.pk';
+const GSC_SITE_URL = process.env.GSC_SITE_URL || 'https://digix.com.pk/';
 const KEY_FILE_PATH = process.env.GOOGLE_APPLICATION_CREDENTIALS || path.join(__dirname, '..', 'gsc-key.json');
 
 // --- 1. EXTRACT ALL 28 PRODUCTION URLS ---
